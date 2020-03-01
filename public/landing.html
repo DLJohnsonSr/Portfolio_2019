@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Dominique L. Johnson, Sr. - Portfolio Project</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Dominique L. Johnson, Sr.">
+        <meta name="description" content="This is a product landing page for the Anderton's Psychosomatic Drive. It was designed as a requirement for freecodecamp.com">
+        <meta name="theme-color" content="#000000">
+
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                background: url("img/lespaul.webp") no-repeat center fixed black;
+                background-size: 100%;
+                color: white;
+                text-align: center;
+                text-shadow: 0.1rem 0.1rem 0.1rem darkslategray;
+            }
+            h1,h2,h3,h4,h5,h6{
+                margin-bottom: 2rem;
+            }
+            h1, .h1{font-size: 2.5rem;}
+            h2, .h2{font-size: 2rem;}
+            h3, .h3{font-size: 1.75rem;}
+            h4, .h4{font-size: 1.5rem;}
+            h5, .h5{font-size: 1.25rem;}
+            h6, .h6{font-size: 1rem;}
+            p{
+                font-size: 20px;
+                line-height: 2rem;
+                background-color: rgba(255, 255, 255, 0.1);
+                padding: 0.4rem;
+                border-radius: 0.5rem;
+            }
+            small{
+                font-size: 0.3rem;
+            }
+            nav{
+                position: fixed;
+                width: 100%;
+                height: 3rem;
+                background-color: silver;
+                font-weight: 700;
+                text-align: center;
+            }
+            nav ul{
+                list-style: none;
+            }
+            nav li{
+                display: inline;
+            }
+            nav li a{
+                display: inline-block;
+                padding: 0.7rem;
+                min-width: 5rem;
+                text-align: center;
+                text-decoration: none;
+                color: black;
+                text-shadow: 0.1rem 0.1rem 0.1rem white;
+            }
+            section{
+                padding: 6rem 1rem 0 1rem;
+                min-height: 100vh;
+            }
+            header{
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+            .flex-container{
+                display:flex;
+                justify-content: space-evenly;
+                align-items: center;
+                align-content: flex-start;
+                flex-flow: row wrap;
+            }
+            .flex-box{
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .flex-text{
+                justify-content: flex-start;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100;
+            }
+            .flex-img{
+                margin: 1rem;
+            }
+            #description .product-img{
+                width: 180px;
+                height: 180px;
+                box-shadow: 0.1rem 0.1rem 0.1rem gray;
+                border-radius: 0.5rem;
+            }
+            #description .flex-text{
+                margin: 2rem auto 0 auto;
+            }
+            iframe{
+                display: block;
+                max-width: 100%;
+                height: auto;
+                margin: 0 auto 2rem auto;
+                border-radius: 0.5rem;
+            }
+            #demo .flex-text{
+                margin: 2rem auto 0 auto;
+            }
+            form{
+                background-color: rgba(255, 255, 255, 0.1);
+                text-align: left;
+                margin: 0 auto 2rem auto;
+                padding: 1rem;
+                border-radius: 0.25rem;
+            }
+            input[type=text],
+            input[type=number],
+            input[type=email],
+            input[type=checkbox],
+            select{
+                padding: 0.5rem;
+                border: 0.2rem solid ghostwhite;
+                border-radius: 0.5rem;
+                background-color: black;
+                color: gray;
+                font-weight: 600;
+            }
+            input[type=text]:hover,
+            input[type=number]:hover,
+            input[type=email]:hover,
+            input[type=checkbox],
+            select:hover{
+                padding: 0.5rem;
+                border: 0.2rem solid gray;
+            }
+            input[type=text]:focus,
+            input[type=number]:focus,
+            input[type=email]:focus,
+            input[type=checkbox],
+            select:focus{
+                background-color: ghostwhite;
+            }
+            .form-group{
+                display: inline-block;
+                width: 100%;
+                margin-bottom: 1.5rem;
+            }
+            .form-label{
+                display: block;
+                margin-bottom: 0.5rem;
+            }
+            .form-input{
+                display: block;
+                width: 100%;
+            }
+            .form-button{
+                width: 100%;
+                border-radius: 0.5rem;
+                background-color: black;
+                color: gray;
+                font-weight: bold;
+                margin-top: 1rem;
+                padding: 0.6rem 0;
+                border: 0.2rem solid ghostwhite;
+                cursor: pointer;
+            }
+            .form-button:hover{
+                background-color: ghostwhite;
+                border: 0.2rem solid gray;
+            }
+            #order .flex-text{
+                margin: 3rem auto 2rem auto;
+            }
+            footer{
+                background-color: silver;
+                width: 100%;
+                padding: 1rem;
+                text-align: center;
+            }
+            footer p{
+                font-size: 12px;
+                color: black;
+                text-shadow: none;
+            }
+            @media (min-width: 992px) {
+                nav{
+                    text-align: left;
+                }
+                section{
+                    width: 70%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                .flex-box,
+                .flex-text{
+                    max-width: 50%;
+                }
+                #description .flex-text,
+                #demo .flex-text,
+                #order .flex-text{
+                    margin-top: 0;
+                }
+                #order p{
+                    width: 60%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 2rem;
+                }
+                form{
+                    padding: 2rem;
+                }
+                .form-group{
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+
+        <nav>
+            <ul>
+                <li><a href="#description">Looks</a></li>
+                <li><a href="#demo">Sounds</a></li>
+                <li><a href="#order">Order</a></li>
+            </ul>
+        </nav>
+
+
+        <section id="description">
+            <header>
+                <h1>The Psychosomatic Drive</h1>
+                <h3>by Wampler Effects</h3>
+            </header>
+            <div class="flex-container">
+                <div class="flex-container flex-box">
+                    <div class="flex-img">
+                        <a href="img/drive0.jpg" target="_blank" aria-label="view image of the Psychosomatic Drive">
+                            <img class="product-img" src="img/drive1.webp" alt="Psychosomatic Drive Picture">
+                        </a>
+                    </div>
+                    <div class="flex-img">
+                        <a href="img/drive1.jpg" target="_blank" aria-label="view image of the Psychosomatic Drive">
+                            <img class="product-img" src="img/drive2.webp" alt="Psychosomatic Drive Picture">
+                        </a>
+                    </div>
+                    <div class="flex-img">
+                        <a href="img/drive2.jpg" target="_blank" aria-label="view image of the Psychosomatic Drive">
+                            <img class="product-img" src="img/drive3.webp" alt="Psychosomatic Drive Picture">
+                        </a>
+                    </div>
+                    <div class="flex-img">
+                        <a href="img/drive3.JPG" target="_blank" aria-label="view image of the Psychosomatic Drive">
+                            <img class="product-img" src="img/drive4.webp" alt="Captain Lee Anderton with the Psychosomatic Drive">
+                        </a>
+                    </div>
+                </div>
+                <div class="flex-text">
+                    <h3>Get the Unobtainable</h3>
+                    <p>There are some pedals that are magical, they do so much to your tone but you can’t actually explain what it is.
+                        Others may not get what this pedal does, but you do.
+                        The Psychosomatic Drive is the essential tone booster pedal that does exactly what you think it should do.
+                        It combines the power of the human mind with Wampler’s high quality premium tone capturing technology for the sound you have had in your head all along.
+                        While some will say ‘It doesn’t do anything!’ you know better than that. You know that when you turn this pedal on, your dream of Captain Anderton tone is instantly there.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="demo">
+            <header>
+                <h2>Sounds</h2>
+            </header>
+
+            <div class="flex-container">
+                <div class="flex-box">
+                    <iframe id="video" rel="preconnect noreferrer" src="https://www.youtube-nocookie.com/embed/kNeWy8vAiuU" frameborder="0" title="YouTube video" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="flex-text">
+                    <h3>Reviews</h3>
+                    <p>"No one necessarily will know the difference but you feel it" – <em>Rob Chapman</em></p>
+                    <p>"It’s like a micro high pass filting compressor so what you get is like that magic extra little bit of intangible nothingness" – <em>Rob Chapman</em> </p>
+                    <p>"When it’s on there’s something there that is almost unreal" – <em>Dan Steinhart</em></p>
+                    <p>"It’s that kind of subtle difference, that makes all the difference, but not very much" – <em>Rabea Massaad</em></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="order">
+            <header>
+                <h2>Order</h2>
+            </header>
+                <p>To get your very own Psychosomatic Drive fill out the form below, click sumbit, and it will arrive like magic (dark magic).
+                    Due to high demand and payment method, only one purchase per person. <small>Individuals who have already sold there soul may be excluded from purchase.</small>
+                </p>
+
+                <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name: </label>
+                        <input class="form-input" type="text" id="name" placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="address">Street Address: </label>
+                        <input class="form-input" type="text" id="address" placeholder="ex. 123 E. Main St, N.W., Suite 202">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="state">State: </label>
+                        <select class="form-input" id="state" name="state" size="1">
+                            <option value="AL">AL</option>
+                            <option value="AK">AK</option>
+                            <option value="AR">AR</option>
+                            <option value="AZ">AZ</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DC">DC</option>
+                            <option value="DE">DE</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="IA">IA</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="MA">MA</option>
+                            <option value="MD">MD</option>
+                            <option value="ME">ME</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MO">MO</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="NC">NC</option>
+                            <option value="NE">NE</option>
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NV">NV</option>
+                            <option value="NY">NY</option>
+                            <option value="ND">ND</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX">TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VT">VT</option>
+                            <option value="VA">VA</option>
+                            <option value="WA">WA</option>
+                            <option value="WI">WI</option>
+                            <option value="WV">WV</option>
+                            <option value="WY">WY</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="zip">Zip Code: </label>
+                        <input class="form-input" id="zip" name="zip" type="text" placeholder="Zip Code" >
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email" >Email: </label>
+                        <input class="form-input" id="email" type="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="agreement">I agree to pay <small>with my soul!</small></label>
+                        <input class="form-checkbox" type="checkbox" id="agreement" name="agreement" checked>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-button" type="submit" id="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <p>The Wampler Psychosomatic Drive is the creation and property of Wampler Effects and Andertons Music. The content on this page, to include copy and images, were taken from the
+                <a href="https://www.andertons.co.uk/guitar-dept/guitar-pedals/buffer-pedals/wampler-psychosomatic-drive-april-fool%21" rel="external noreferrer" target="_blank"  aria-label="information from Anderton's on the Psychosomatic Drive">
+                Anderton's music website</a> and are used for educational purposes only. &copy 2019
+            </p>
+        </footer>
+    </body>
+</html>

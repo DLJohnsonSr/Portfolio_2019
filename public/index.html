@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Dominique L. Johnson, Sr. Design Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Dominique Johnson">
+	<meta name="description" content="This is a profolio page with design front- and back-end examples of software engineer, Dominique L. Johnson, Sr.">
+	<meta name="theme-color" content="#0000FF"/>
+
+	<!-- Bootstrap 4 CSS CDN -->
+	<link rel="preconnect stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- Bootstrap CSS local fallback -->
+	<script>
+		var test = document.createElement("div");
+		test.className = "hidden d-none";
+
+		document.head.appendChild(test);
+		var cssLoaded = window.getComputedStyle(test).display === "none";
+		document.head.removeChild(test);
+
+		if (!cssLoaded) {
+			var link = document.createElement("link");
+
+			link.type = "text/css";
+			link.rel = "stylesheet";
+			link.href = "vendor/bootstrap/css/bootstrap.min.css";
+
+			document.head.appendChild(link);
+		}
+	</script>
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="preconnect stylesheet" href="css/styles.css" type="text/css">
+
+</head>
+<body>
+	<!-- start NAVBAR -->
+	<nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top shadow">
+		<div class="container">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<div class="navbar-nav">
+					<a class="nav-item nav-link" href="#sectionWelcome">
+						<button class=" btn btn-primary" type="button">Home</button>
+					</a>
+					<a class="nav-item nav-link" href="#sectionAbout">
+						<button class="btn btn-primary" type="button">About</button>
+					</a>
+					<a class="nav-item nav-link" href="#sectionProjects">
+						<button class=" btn btn-primary" type="button">Projects</button>
+					</a>
+					<a class="nav-item nav-link" href="#sectionContact">
+						<button class="btn btn-primary" type="button">Contact</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!-- end NAVBAR -->
+
+	<!-- start SECTION: Welcome -->
+	<section id="sectionWelcome">
+		<div class="container">
+			<div class="profile">
+				<h1>Dominique L. Johnson, Sr.</h1>
+				<h3>Full-Stack Web Developer</h3>
+				<img class="shadow" src="img/dljsr.webp" alt="Dominique L. Johnson, Sr.">
+			</div>
+
+			<!-- FLEX-BOX framework images start -->
+			<div class="flex-container">
+				<div class="flex-box">
+					<img class="flex-box-img" src="img/html5.svg" alt="HTML5 Logo">
+					<!-- Icons made Pixel Buddha https://www.flaticon.com/authors/pixel-buddha" -->
+					<h6 class="h6 flex-box-label">HTML5</h6>
+				</div>
+				<div class="flex-box">
+					<img class="flex-box-img" src="img/css3.svg" alt="CSS3 Logo">
+					<!-- <div>Icons made by Pixel perfect "https://www.flaticon.com/authors/pixel-perfect" -->
+					<h6 class="h6 flex-box-label">CSS</h6>
+				</div>
+				<div class="flex-box">
+					<img class="flex-box-img" src="img/javascript.webp" alt="JavaScript Logo">
+					<!--  -->
+					<h6 class="h6 flex-box-label">JavaScript</h6>
+				</div>
+				<div class="flex-box">
+					<img class="flex-box-img" src="img/react.webp" alt="React Logo">
+					<!--  -->
+					<h6 class="h6 flex-box-label">React</h6>
+				</div>
+				<div class="flex-box">
+					<img class="flex-box-img" src="img/java.svg" alt="Java Logo">
+					<!-- <div>Icons made by Freepik "https://www.flaticon.com/authors/freepik" -->
+					<h6 class="h6 flex-box-label">Java</h6>
+				</div>
+				<div class="flex-box">
+					<img class="flex-box-img" src="img/spring.webp" alt="Java Spring Boot + Mavan Logo">
+					<h6 class="h6 flex-box-label">Spring Boot</h6>
+				</div>
+				<div class="flex-box">
+					<img class="flex-box-img" src="img/thymeleaf.webp" alt="Thymeleaf Logo">
+					<h6 class="h6 flex-box-label">Thymeleaf</h6>
+				</div>
+				<div class="flex-box">
+					<img class="flex-box-img" src="img/bootstrap.svg" alt="Bootstrap Logo">
+					<h6 class="h6 flex-box-label">Bootstrap</h6>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<!-- end SECTION: Welcome -->
+
+	<!-- start SECTION: About-->
+	<section id="sectionAbout">
+		<div class="container">
+			<h2>About</h2>
+			<div class="flex-container">
+				<div id="training" class="flex-box">
+					<h4>Training</h4>
+					<div class="text-block">
+						<h6>CodeWork Academy Java Bootcamp</h6>
+						<span>Full-Stack Java Web Development</span>
+						<span>June 2018</span>
+					</div>
+					<div class="text-block">
+						<h6>University of Maryland, UC</h6>
+						<span>Masters of Science - Project Management</span>
+						<span>May 2011</span>
+					</div>
+					<div class="text-block">
+						<h6>Howard University</h6>
+						<span>Bachelors of Arts - Social Sciences</span>
+						<span>May 2003</span>
+					</div>
+				</div>
+				<div id="design" class="flex-box">
+					<h4>Design Philosophy</h4>
+					<div class="text-block">
+						<ul>
+							<li>Accessibility First</li>
+							<li>Fast Over Flash</li>
+							<li>Be Kind, Comment</li>
+							<li>Decouple Don't Complicate</li>
+							<li>Refactor With A Plan</li>
+						</ul>
+					</div>
+					<h4>Design & Code Repositories</h4>
+					<div class="flex-container">
+						<div class="flex-box">
+							<a href="https://github.com/DLJohnsonSr" rel="external noreferrer" target="_blank" aria-label="check out this design repository">
+								<img class="flex-box-img" src="img/github.svg" alt="Github.com Logo">
+								<h6 class="h6">GitHub</h6>
+							</a>
+						</div>
+						<div class="flex-box">
+							<a href="https://codepen.io/DLJohnsonSr/#" rel="external noreferrer" target="_blank" aria-label="check out this design repository">
+								<img class="flex-box-img" src="img/codepen.svg" alt="Codepen.io Logo">
+								<h6 class="h6">CodePen</h6>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end SECTION: About-->
+
+	<!-- start SECTION: Projects -->
+	<section id="sectionProjects">
+		<div class="container">
+			<h2>Projects</h2>
+			<div class="flex-container">
+				<a href="tribute.html" target="_blanket" aria-label="check out this design project">
+					<div class="flex-box">
+						<div class="project-tile-container">
+							<div class="project-tile">
+								<iframe src="tribute.html" frameborder="0" title="tribue page preview"></iframe>
+							</div>
+						</div>
+						<h6 class="h6">Tribute Page</h6>
+					</div>
+				</a>
+				<div class="flex-box">
+					<a href="survey.html" target="_blanket" aria-label="check out this design project">
+						<div class="project-tile-container">
+							<div class="project-tile">
+								<iframe src="survey.html" frameborder="0" title="survey page preview"></iframe>
+							</div>
+						</div>
+						<h6 class="h6">Survey Page</h6>
+					</a>
+				</div>
+				<div class="flex-box">
+					<a href="landing.html" target="_blanket" aria-label="check out this design project">
+						<div class="project-tile-container">
+							<div class="project-tile">
+								<iframe src="landing.html" frameborder="0" title="landing page preview"></iframe>
+							</div>
+						</div>
+						<h6 class="h6">Product Landing Page</h6>
+					</a>
+				</div>
+				<div class="flex-box">
+					<a href="technical.html" target="_blanket" aria-label="check out this design project">
+						<div class="project-tile-container">
+							<div class="project-tile">
+								<iframe src="technical.html" frameborder="0"  title="technical documents page preview"></iframe>
+							</div>
+						</div>
+						<h6 class="h6">Technical Document Page</h6>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end SECTION: Projects -->
+
+	<!-- start SECTION: Contact -->
+	<section id="sectionContact">
+		<div class="container">
+			<h2>Contact</h2>
+
+			<!-- FORM contact us -->
+			<form id="contactForm" method="POST">
+				<div class="row">
+					<div class="form-group col-12 col-md-6">
+						<label class="form-label" for="name">Contact Name:</label>
+						<input class="form-control" id="name" type="text" name="name" placeholder="Name" required>
+					</div>
+					<div class="form-group col-12 col-md-6">
+						<label class="form-label" for="organization">Organization Name:</label>
+						<input class="form-control" id="organization" type="text" name="organization" placeholder="Organization Name">
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group  col-12 col-md-6">
+						<label class="form-label" for="phone">Phone Number:</label>
+						<input class="form-control" id="phone" type="text" name="phone" placeholder="555-555-5555">
+					</div>
+					<div class="form-group col-12 col-md-6">
+						<label class="form-label" for="email">Email Address:</label>
+						<input class="form-control" id="email" type="email" name="email" placeholder="you@your-company.com" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<p>How would you like me to contact you?</p>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" id="radioEmail" type="radio" name="preferred" value="email" checked>
+						<label class="form-check-label" for="radio-email">
+							Email
+						</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" id="radioPhone" type="radio" name="preferred" value="phone">
+						<label class="form-check-label" for="radio-phone">
+							Phone
+						</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="form-label" for="message">What would you like me to develop?</label>
+					<textarea class="form-control" id="message" name="message" placeholder="Tell me what you need..." rows="6" required></textarea>
+				</div>
+				<div class="form-group clearfix">
+					<button class="btn btn-primary float-right" type="submit">Submit</button>
+				</div>
+
+			</form>
+		</div>
+
+	</section>
+	<!-- end SECTION: Contact -->
+
+	<footer class="bg-light">
+        <p>&copy; 2019 - Dominique L. Johnson, Sr - All Rights Reserved.</p>
+    </footer>
+
+
+	<!-- FIREBASE-->
+	<!-- FIREBASE-->
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="/__/firebase/6.4.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+	 https://firebase.google.com/docs/web/setup#reserved-urls -->
+	 <script src="/__/firebase/6.4.0/firebase-auth.js"></script>
+	 <script src="/__/firebase/6.4.0/firebase-firestore.js"></script>
+	
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+
+	<!-- CUSTOM SCRIPTS-->
+	<!-- CUSTOM SCRIPTS-->
+	<!-- SCRIPTS -->
+	<script src="js/main.js"></script>
+
+	<!-- BOOTSTRAP-->
+	<!-- BOOTSTRAP-->
+    <!-- jQuery CDN &  local fallback-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+		window.jQuery || document.write('<script src="/public/vendor/jquery.min.js"><\/script>')
+	</script>
+
+    <!-- Popper CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <!-- BootStrap JS CDN & local fallback -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+		if(typeof($.fn.modal) === 'undefined') {document.write('<script src="/public/vendor/bootstrap/js/bootstrap.min.js"><\/script>')}
+	</script>
+
+  </body>
+</html>

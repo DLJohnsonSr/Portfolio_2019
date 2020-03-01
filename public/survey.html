@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Dominique L. Johnson, Sr. Design Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Dominique Johnson">
+    <meta name="description" content="This is a survay page. It was designed as a requirement for freecodecamp.com">
+    <meta name="theme-color" content="#808080">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+        body{
+            background-color: beige;
+            color:brown;
+        }
+        .form-body{
+            background-color: white;
+            width: 50%;
+            margin: auto;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid brown;
+            border-radius: 25px;
+        }
+        .form-element{
+            background-color: white;
+            margin: 15px 30px;
+            padding: 15px;
+            border-left: 4px solid beige;
+            border-radius: 25px;
+        }
+            p,
+            span,
+            .form-label{
+            font-size: 1.3em;
+        }
+        input[type=text],
+        input[type=email],
+        input[type=number],
+        select{
+            background-color: beige;
+            color: brown;
+            font-size: 1em;
+            width: 100%;
+            margin-top: 20px;            
+            padding: 10px 20px;
+            display: inline-block;
+            box-sizing: border-box;
+            border-radius: 25px;
+            border: 2px solid brown;
+        }
+        input[type=radio],
+        input[type=checkbox]{
+            cursor: pointer;
+        }
+        .radio-group,
+        .checkbox-group{
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        textarea{
+            background-color: beige;
+            color: brown;
+            font-size: 1.3em;
+            width: 100%;
+            height: 100px;
+            margin-top: 20px;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            border-radius: 25px;
+            border: 2px solid brown;
+            resize: none;
+        }
+        button{
+            width: 100%;
+            background-color: beige;
+            color: brown;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            border-radius: 25px;
+            border: 2px solid brown;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: brown;
+            color:beige;
+            border: 3px solid beige;
+        }
+        #title,
+        #description{
+            text-align: center;
+            padding: 10px;
+        }
+        @media screen and (max-width: 992px){
+            .form-body{
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-body">
+
+        <h1 id="title">Guitar G.A.S Survey</h1>
+
+        <p id="description">Gearheads everywhere want to know what you are buying and why.</p>
+
+        <form id="survey-form" action="#" method="POST">
+
+            <!-- NAME -->
+            <div class="form-element">
+                <div class="form-label">
+                    <label id="name-label" for="name">Name</label>
+                </div>
+                <div class="form-input">    
+                    <input type="text" id="name" name="name" placeholder="Enter Name" required>            
+                </div>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="form-element">
+                <div class="form-label">
+                    <label id="email-label" for="email">Email</label>
+                </div>    
+                <div class="form-input">
+                    <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                </div>
+            </div>
+
+            <!-- NUMBER -->
+            <div class="form-element">
+                <div class="form-label">
+                    <label id="number-label" for="number">How many hours do you play a day?</label>
+                </div>
+                <div class="form-input">
+                    <input type="number" id="number" name="number" min="1" max="24" placeholder="Enter Number">
+                </div>
+            </div>
+
+            <!-- DROPDOWN -->
+            <div class="form-element">
+                <div class="form-label">
+                    <label for="dropdown">How would you decribe yourself?</label>
+                </div>
+                <div class="form-input">
+                    <select id="dropdown" name="dropdown">
+                        <option value="" selected>Choose your level</option>
+                        <option value="beginner">Where does the sound come from?</option>
+                        <option value="intermediate">I managed to play "Wild Thing" with POWER chords!</option>
+                        <option value="advanced">My EVH medley pays the rent.</option>
+                        <option value="master">Abasi, Gilbert, & Mayer all begged to open for me. </option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- RADIO -->
+            <div class="form-element">
+                <span>What products are you MOST interested in?</span>
+                <div class="radio-group">
+                    <label class="radio-label" for="guitars">
+                        <input type="radio" id="guitars" name="interested" value="guitars">
+                        Guitars
+                    </label>
+                </div>
+                <div class="radio-group">
+                    <label class="radio-label" for="amplifiers">
+                        <input type="radio" id="amplifiers" name="interested" value="amplifiers">
+                        Amplifiers
+                    </label>
+                </div>
+                <div class="radio-group">
+                    <label class="radio-label" for="pedals">
+                        <input type="radio" id="pedals" name="interested" value="pedals">
+                        Effects Pedals
+                    </label>
+                </div>
+                <div class="radio-group">
+                    <label class="radio-label" for="accessories">
+                        <input type="radio" id="accessories" name="interested" value="accessories">
+                        Guitar & Amp Accessories
+                    </label>
+                </div>
+            </div>
+
+            <!-- CHECKBOX -->
+            <div class="form-element">
+                <span>Which of these brands are you Interested in?</span>
+                <div class="checkbox-group">
+                    <label class="checkbox-label" for="brand1">
+                        <input type="checkbox" id="brand1" name="brand1" value="boss">
+                        Boss
+                    </label>
+                </div>
+                <div class="checkbox-group">
+                    <label  class="checkbox-label" for="brand2"><input type="checkbox" id="brand2" name="brand2" value="mxr">
+                        MXR / Dunlop
+                    </label>
+                </div>    
+                <div class="checkbox-group">
+                    <label  class="checkbox-label" for="brand3">
+                        <input type="checkbox" id="brand3" name="brand3" value="exh">
+                        Electro-Harmonix
+                    </label>
+                </div>    
+                <div class="checkbox-group">
+                    <label  class="checkbox-label" for="brand4">
+                        <input type="checkbox" id="brand4" name="brand4" value="keeley">
+                        Keeley
+                    </label>
+                </div>    
+                <div class="checkbox-group">
+                    <label  class="checkbox-label" for="brand5">
+                        <input type="checkbox" id="brand5" name="brand5" value="jhs">
+                        JHS
+                    </label>
+                </div>    
+                <div class="checkbox-group">
+                    <label  class="checkbox-label" for="brand6">
+                        <input type="checkbox" id="brand6" name="brand6" value="wampler">
+                        Wampler
+                    </label>
+                </div>    
+                <div class="checkbox-group">
+                    <label  class="checkbox-label" for="brand7">
+                        <input type="checkbox" id="brand7" name="brand7" value="boutique">
+                        Other Boutique
+                    </label>
+                </div>
+            </div>
+
+            <!-- TEXTAREA -->
+            <div class="form-element">
+                <div class="form-label">
+                    <label class="textarea-label" for="excitement">Tell us what excites to most about new gear.</label> 
+                </div>
+                <div class="form-input">
+                    <textarea id="excitement" name="excitement" rows="3" cols="30"></textarea>
+                </div>
+            </div>
+
+            <!-- BUTTON -->
+            <div class="form-element">
+                <button id="submit" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</body>  
+</html>
